@@ -1,0 +1,24 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".westeros.org"
+  [url-cookie "__cfduid" "da848f981a80346323c0b39e6c2f022381583129858" "Wed, 01-Apr-20 06:17:38 GMT" "/" ".westeros.org" nil])
+ (".google.com"
+  [url-cookie "NID" "199=GlNEoMIrWnSJuK06-DeFFWkjYTpbb-_Y1PZhZkxje7LXGG_0wh_qtRXieGbmyPJ1yHgjBF9e4znXSjRLJelm2B-HqGfL2to8iWfWQfIguwZ4V6iLSOg-1P35aQlrajLZ2Tx9QDesAohwAc6OxkTlN8sU7Mbv-B8lqSFGdOIbVlI" "Tue, 01-Sep-2020 06:13:31 GMT" "/" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Sat, 29-Aug-2020 06:13:40 GMT" "/complete/search" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Sat, 29-Aug-2020 06:13:40 GMT" "/search" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("en.wikipedia.org"
+  [url-cookie "WMF-Last-Access" "02-Mar-2020" "Fri, 03 Apr 2020 00:00:00 GMT" "/" "en.wikipedia.org" t])
+ (".wikipedia.org"
+  [url-cookie "WMF-Last-Access-Global" "02-Mar-2020" "Fri, 03 Apr 2020 00:00:00 GMT" "/" ".wikipedia.org" t])
+ (".google.com"
+  [url-cookie "1P_JAR" "2020-03-02-06" "Wed, 01-Apr-2020 06:17:30 GMT" "/" ".google.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

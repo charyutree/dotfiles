@@ -1,0 +1,70 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("into-ledger config"
+ (filename . "~/.into-ledger/config.yaml")
+ (front-context-string . "accounts:\n  cba-")
+ (rear-context-string)
+ (position . 1))
+("ledger bash import "
+ (filename . "~/bin/csv2ldg.sh")
+ (front-context-string . "#/usr/bin/bash\n\n")
+ (rear-context-string)
+ (position . 1))
+("ledger journal"
+ (filename . "~/Ledger/journal.ldg")
+ (front-context-string . "2020/01/01 * Ini")
+ (rear-context-string)
+ (position . 1))
+(",AS"
+ (filename . "~/Dropbox/org-files/contacts.org")
+ (front-context-string)
+ (rear-context-string . "roup.com\n :END:\n")
+ (position . 2176))
+("personal"
+ (filename . "~/Dropbox/org-files/personal.org")
+ (front-context-string . "** Misc\n*** Kyle")
+ (rear-context-string . "ents\n** Someday\n")
+ (position . 766))
+("Spreadsheets"
+ (filename . "z:/Spreadsheets/")
+ (front-context-string . "14-030 - Crane B")
+ (rear-context-string . "654 2018-05-04  ")
+ (position . 215))
+("shortcuts.org"
+ (filename . "~/Dropbox/org-files/shortcuts.org")
+ (front-context-string . "\n*** [[file://NA")
+ (rear-context-string . "ty]]\n** Footings")
+ (position . 360))
+("Master"
+ (filename . "~/Dropbox/org-files/master.org")
+ (front-context-string . "*** Refiling\n***")
+ (rear-context-string . "tage 5\n*** Misc\n")
+ (position . 1838))
+("contacts.org"
+ (filename . "~/Dropbox/org-files/contacts.org")
+ (front-context-string . "#+COLUMNS: %25IT")
+ (rear-context-string)
+ (position . 1))
+("org-capture-last-stored"
+ (filename . "~/Dropbox/org-files/shopping.org")
+ (front-context-string . "- [ ] quiche (fa")
+ (rear-context-string . "ay\n- [X] juice \n")
+ (position . 239))
+("org-refile-last-stored"
+ (filename . "~/Dropbox/org-files/personal.org")
+ (front-context-string . "*** TODO Buy Yab")
+ (rear-context-string . " Buy Charcoal  \n")
+ (position . 2754))
+("work.org"
+ (filename . "~/emacs-org/work.org")
+ (front-context-string . "* LOA\n** Current")
+ (rear-context-string)
+ (position . 1))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "\n\n;;;;Org mode c")
+ (rear-context-string . "macs.d/themes/\")")
+ (position . 265))
+)
