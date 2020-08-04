@@ -1,0 +1,55 @@
+accounts:
+  cba-mastercard:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/Commbank/Mastercard/out/out.ldg
+
+  cba-smart-access:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/Commbank/Smart-Access/out/out.ldg
+
+  cba-offset:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/Commbank/Offset/out/out.ldg
+
+  cba-home-loan:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/Commbank/Home-Loan/out/out.ldg
+
+  ing-living-expenses:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/ING/Living-Expenses/out/out.ldg
+ 
+  ing-splurge:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/ING/Splurge/out/out.ldg
+ 
+  ing-smile:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/ING/Smile/out/out.ldg
+ 
+  ing-home-loan:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/ING/Smile/out/out.ldg
+ 
+  cba-mojo:
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/Commbank/Mojo/out/out.ldg
+ 
