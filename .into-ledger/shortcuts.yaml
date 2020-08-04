@@ -182,6 +182,9 @@ keys:
 - short: b
   mapto: Bank
   label: Kids
+- short: s
+  mapto: Savings
+  label: LO
 - short: c
   mapto: Commonwealth
   label: Liabilities
@@ -212,6 +215,9 @@ keys:
 - short: t
   mapto: Transfer
   label: Mortgage
+- short: l
+  mapto: LO
+  label: Other
 - short: i
   mapto: Insurance
   label: Pets
@@ -343,6 +349,9 @@ keys:
   label: default
 - short: l
   mapto: Liabilities
+  label: default
+- short: o
+  mapto: Other
   label: default
 - short: r
   mapto: Rebates
