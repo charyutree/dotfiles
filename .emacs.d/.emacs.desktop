@@ -2,54 +2,42 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Jul 29 22:55:49 2020
+;; Created Wed Aug  5 14:06:40 2020
 ;; Desktop file format version 208
 ;; Emacs version 26.3
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (24353 29141 187575 397000) (desktop . "208") "brent@BrentO" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-ADBO-Source Code Pro-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (font-parameter . "-ADBO-Source Code Pro-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "OrangeRed") (border-color . "#ECEFF1") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "dark turquoise") (scroll-bar-background . "gray20") (menu-bar-lines . 1) (tool-bar-lines . 3) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 17) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . fullboth) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (frameset--id . "200B-40C8-FD69-ED6A") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 59) (width . 235) (left . 0) (top . 0)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 14) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 68) (min-pixel-width . 160) (min-pixel-height-ignore . 34) (min-pixel-width-ignore . 112) (min-pixel-height-safe . 17) (min-pixel-width-safe . 32)) hc (pixel-width . 1920) (pixel-height . 998) (total-width . 240) (total-height . 59) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 966) (pixel-height . 998) (total-width . 121) (total-height . 59) (normal-height . 1.0) (normal-width . 0.5015806111696522) (buffer "personal.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 6774) (start . 1))) (leaf (last . t) (pixel-width . 954) (pixel-height . 998) (total-width . 119) (total-height . 59) (normal-height . 1.0) (normal-width . 0.49841938883034775) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (24362 12368 45728 0) (desktop . "208") "Oar-5@DESKTOP-J6FM8JU" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font-backend uniscribe gdi) (font . "-outline-Courier New-normal-normal-normal-mono-13-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#333333") (background-color . "#FFFFFF") (mouse-color . "OrangeRed") (border-color . "gold") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 1) (tool-bar-lines . 3) (height . 60) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 17) (scroll-bar-height . 0) (fullscreen . maximized) (z-group) (visibility . t) (display-type . color) (background-mode . light) (cursor-color . "#0FB300") (environment) (override-redirect) (font-parameter . "-ADBO-Source Code Pro-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (scroll-bar-foreground . "dark turquoise") (scroll-bar-background . "gray20") (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (sticky) (frameset--id . "200B-40C8-FD69-ED6A") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (width . 235) (left + -8) (top + -8)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 14) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 64) (min-pixel-width . 160) (min-pixel-height-ignore . 48) (min-pixel-width-ignore . 112) (min-pixel-height-safe . 16) (min-pixel-width-safe . 32)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 240) (total-height . 59) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 960) (pixel-height . 945) (total-width . 120) (total-height . 59) (normal-height . 1.0) (normal-width . 0.5) (buffer "master.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 12611) (start . 1))) (leaf (last . t) (pixel-width . 960) (pixel-height . 945) (total-width . 120) (total-height . 59) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Custom Themes*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 293) (start . 226)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring nil)
+(setq search-ring '("contrast" "marine" "brandl" "burle" "brand"))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
 (setq file-name-history '("~/Dropbox/org-files/personal.org" "~/Dropbox/org-files/shortcuts.org" "~/Dropbox/org-files/master.org" "~/.emacs.d/" "c:/Users/RossB/Dropbox/org-files/shortcuts.org" "c:/Users/RossB/Dropbox/org-files/master.org"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/brent/Dropbox/org-files/personal.org"
-  "personal.org"
-  'org-mode
-  '(eldoc-mode override-global-mode org-indent-mode helm-mode)
-  6774
-  '(2390 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-display-time 24353 29141 184080 375000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
-  '((mark-ring (6774 2012 6774 6774 950 16 6774 6774 5452 6774 2150 6774 2017 2052 2025 6774))))
-
-(desktop-create-buffer 208
-  "/home/brent/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(eldoc-mode override-global-mode helm-mode)
-  10669
-  '(10449 nil)
-  nil
-  nil
-  '((buffer-display-time 24353 29073 859719 49000) (buffer-file-coding-system . utf-8-dos))
-  '((mark-ring (10436 10424 10417 10411 10401 10400 10391 10380 10246 10362 10270 10362 10362 10382 10676 10669))))
-
-(desktop-create-buffer 208
-  "/home/brent/Dropbox/org-files/master.org"
+  "c:/Users/Oar-5/Dropbox/org-files/master.org"
   "master.org"
   'org-mode
-  '(eldoc-mode override-global-mode org-indent-mode helm-mode)
-  73543
-  '(73543 nil)
+  '(eldoc-mode override-global-mode helm-mode org-indent-mode)
+  12611
+  '(24348 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-display-time 24353 29105 747697 18000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
-  '((mark-ring (73543))))
+  '((indent-tabs-mode) (buffer-display-time 24362 12368 40037 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (12846 9088 1 77059 1838 6726 6361 6362 735 13091 8951 9080 12611))))
+
+(desktop-create-buffer 208
+  "c:/Users/Oar-5/Dropbox/org-files/personal.org"
+  "personal.org"
+  'org-mode
+  '(eldoc-mode override-global-mode helm-mode org-indent-mode)
+  4980
+  '(4971 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24362 10836 633484 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (7451 7451))))
 

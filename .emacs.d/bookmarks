@@ -48,15 +48,15 @@
  (rear-context-string)
  (position . 1))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/org-files/shopping.org")
- (front-context-string . "- [ ] quiche (fa")
- (rear-context-string . "ay\n- [X] juice \n")
- (position . 239))
+ (filename . "~/Dropbox/org-files/master.org")
+ (front-context-string . "**** TODO  Geote")
+ (rear-context-string . "     :Refiling:\n")
+ (position . 6701))
 ("org-refile-last-stored"
- (filename . "~/Dropbox/org-files/personal.org")
- (front-context-string . "*** TODO Buy Yab")
- (rear-context-string . " Buy Charcoal  \n")
- (position . 2754))
+ (filename . "~/Dropbox/org-files/master.org")
+ (front-context-string . "**** TODO  Geote")
+ (rear-context-string . "NT: ASP\n:END: \n\n")
+ (position . 71403))
 ("work.org"
  (filename . "~/emacs-org/work.org")
  (front-context-string . "* LOA\n** Current")
