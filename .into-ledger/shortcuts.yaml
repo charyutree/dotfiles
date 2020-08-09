@@ -161,6 +161,9 @@ keys:
 - short: r
   mapto: Renovations
   label: Home
+- short: e
+  mapto: Emergency
+  label: ING
 - short: l
   mapto: Living Expenses
   label: ING

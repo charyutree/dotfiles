@@ -47,6 +47,13 @@ accounts:
     d: 02/01/2006
     j: /home/brent/Ledger/main.dat
     o: /home/brent/Ledger/csv/ING/Smile/out/out.ldg
+
+  ing-emergency:
+    a: Assets:Bank:ING:Emergency
+    c: AUD 
+    d: 02/01/2006
+    j: /home/brent/Ledger/main.dat
+    o: /home/brent/Ledger/csv/ING/Emergency/out/out.ldg
  
   cba-mojo:
     a: Assets:Bank:Commonwealth:Mojo
