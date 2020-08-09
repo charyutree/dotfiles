@@ -1,3 +1,4 @@
+<<<<<<< HEAD:.emacs.d/auto-save-list/.saves-6298-BrentO~
 /home/brent/Dropbox/org-files/finances.org
 /home/brent/Dropbox/org-files/#finances.org#
 /home/brent/Ledger/journal.ldg
@@ -8,3 +9,15 @@
 /home/brent/dotfiles/.emacs.d/#init.el#
 /home/brent/Dropbox/org-files/master.org
 /home/brent/Dropbox/org-files/#master.org#
+=======
+/home/brent/Dropbox/org-files/personal.org
+/home/brent/Dropbox/org-files/#personal.org#
+/home/brent/Ledger/journal.ldg
+/home/brent/Ledger/#journal.ldg#
+/home/brent/Ledger/scripts/csv2ldg.sh
+/home/brent/Ledger/scripts/#csv2ldg.sh#
+/home/brent/dotfiles/.emacs.d/init.el
+/home/brent/dotfiles/.emacs.d/#init.el#
+/home/brent/Dropbox/org-files/master.org
+/home/brent/Dropbox/org-files/#master.org#
+>>>>>>> ac77d0318b315b8f6c2a72bff0c54541b9af11db:.emacs.d/auto-save-list/.saves-15831-BrentO~

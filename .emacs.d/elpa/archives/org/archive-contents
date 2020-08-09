@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 (1 (org              . [(20200803) ( ) "Outline-based notes management and organizer" tar])
    (org-plus-contrib . [(20200803) ( ) "Outline-based notes management and organizer" tar]))
+=======
+(1 (org              . [(20200706) ( ) "Outline-based notes management and organizer" tar])
+   (org-plus-contrib . [(20200706) ( ) "Outline-based notes management and organizer" tar]))
+>>>>>>> ac77d0318b315b8f6c2a72bff0c54541b9af11db
