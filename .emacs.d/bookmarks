@@ -2,22 +2,7 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("into-ledger config"
- (filename . "~/.into-ledger/config.yaml")
- (front-context-string . "accounts:\n  cba-")
- (rear-context-string)
- (position . 1))
-("ledger bash import "
- (filename . "~/bin/csv2ldg.sh")
- (front-context-string . "#/usr/bin/bash\n\n")
- (rear-context-string)
- (position . 1))
-("ledger journal"
- (filename . "~/Ledger/journal.ldg")
- (front-context-string . "2020/01/01 * Ini")
- (rear-context-string)
- (position . 1))
-(",AS"
+((",AS"
  (filename . "~/Dropbox/org-files/contacts.org")
  (front-context-string)
  (rear-context-string . "roup.com\n :END:\n")
@@ -48,15 +33,15 @@
  (rear-context-string)
  (position . 1))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/org-files/master.org")
- (front-context-string . "**** TODO xx-xxx")
- (rear-context-string . ": Coates\n:END: \n")
- (position . 8836))
+ (filename . "~/Dropbox/org-files/personal.org")
+ (front-context-string . "*** TODO Electri")
+ (rear-context-string . "17 3\n - $890.88\n")
+ (position . 804))
 ("org-refile-last-stored"
  (filename . "~/Dropbox/org-files/master.org")
- (front-context-string . "**** TODO xx-xxx")
- (rear-context-string . ": Coates\n:END: \n")
- (position . 4759))
+ (front-context-string . "**** TODO 20-370")
+ (rear-context-string . "7-16 Thu 10:18]\n")
+ (position . 6492))
 ("work.org"
  (filename . "~/emacs-org/work.org")
  (front-context-string . "* LOA\n** Current")

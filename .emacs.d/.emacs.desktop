@@ -2,16 +2,16 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Aug  5 14:06:40 2020
+;; Created Fri Jul 17 10:30:02 2020
 ;; Desktop file format version 208
 ;; Emacs version 26.3
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (24362 12368 45728 0) (desktop . "208") "Oar-5@DESKTOP-J6FM8JU" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font-backend uniscribe gdi) (font . "-outline-Courier New-normal-normal-normal-mono-13-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#333333") (background-color . "#FFFFFF") (mouse-color . "OrangeRed") (border-color . "gold") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 1) (tool-bar-lines . 3) (height . 60) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 17) (scroll-bar-height . 0) (fullscreen . maximized) (z-group) (visibility . t) (display-type . color) (background-mode . light) (cursor-color . "#0FB300") (environment) (override-redirect) (font-parameter . "-ADBO-Source Code Pro-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (scroll-bar-foreground . "dark turquoise") (scroll-bar-background . "gray20") (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (sticky) (frameset--id . "200B-40C8-FD69-ED6A") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (width . 235) (left + -8) (top + -8)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 14) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 64) (min-pixel-width . 160) (min-pixel-height-ignore . 48) (min-pixel-width-ignore . 112) (min-pixel-height-safe . 16) (min-pixel-width-safe . 32)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 240) (total-height . 59) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 960) (pixel-height . 945) (total-width . 120) (total-height . 59) (normal-height . 1.0) (normal-width . 0.5) (buffer "master.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 12611) (start . 1))) (leaf (last . t) (pixel-width . 960) (pixel-height . 945) (total-width . 120) (total-height . 59) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Custom Themes*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 293) (start . 226)))))])
+(setq desktop-saved-frameset [frameset 1 (24336 61706 678146 0) (desktop . "208") "Oar-5@DESKTOP-J6FM8JU" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font-backend uniscribe gdi) (font . "-outline-Courier New-normal-normal-normal-mono-13-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#2E3436") (background-color . "#EDEDED") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 1) (tool-bar-lines . 3) (height . 60) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 17) (scroll-bar-height . 0) (fullscreen . maximized) (z-group) (visibility . t) (display-type . color) (background-mode . light) (cursor-color . "#00BBFF") (environment) (frameset--id . "200B-40C8-FD69-ED6A") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top) (width . 235) (left + -8) (top + -8)) ((min-height . 8) (min-width . 30) (min-height-ignore . 4) (min-width-ignore . 21) (min-height-safe . 2) (min-width-safe . 6) (min-pixel-height . 128) (min-pixel-width . 240) (min-pixel-height-ignore . 64) (min-pixel-width-ignore . 168) (min-pixel-height-safe . 32) (min-pixel-width-safe . 48)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 240) (total-height . 59) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (vc (pixel-width . 912) (pixel-height . 945) (total-width . 114) (total-height . 59) (normal-height . 1.0) (normal-width . 0.475482912332838) (combination-limit) (leaf (pixel-width . 912) (pixel-height . 542) (total-width . 114) (total-height . 34) (normal-height . 0.5714285714285714) (normal-width . 1.0) (buffer "master.org" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 72632) (start . 491))) (hc (last . t) (pixel-width . 912) (pixel-height . 403) (total-width . 114) (total-height . 25) (normal-height . 0.42857142857142855) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 480) (pixel-height . 403) (total-width . 60) (total-height . 25) (normal-height . 1.0) (normal-width . 0.525) (buffer "shortcuts.org" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 2552) (start . 850))) (leaf (last . t) (pixel-width . 432) (pixel-height . 403) (total-width . 54) (total-height . 25) (normal-height . 1.0) (normal-width . 0.475) (buffer "shortcuts.org" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 4525) (start . 3884))))) (leaf (last . t) (pixel-width . 1008) (pixel-height . 945) (total-width . 126) (total-height . 59) (normal-height . 1.0) (normal-width . 0.524517087667162) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 145) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("contrast" "marine" "brandl" "burle" "brand"))
+(setq search-ring nil)
 (setq regexp-search-ring nil)
 (setq register-alist nil)
 (setq file-name-history '("~/Dropbox/org-files/personal.org" "~/Dropbox/org-files/shortcuts.org" "~/Dropbox/org-files/master.org" "~/.emacs.d/" "c:/Users/RossB/Dropbox/org-files/shortcuts.org" "c:/Users/RossB/Dropbox/org-files/master.org"))
@@ -21,23 +21,47 @@
   "c:/Users/Oar-5/Dropbox/org-files/master.org"
   "master.org"
   'org-mode
-  '(eldoc-mode override-global-mode helm-mode org-indent-mode)
-  12611
-  '(24348 nil)
+  '(eldoc-mode override-global-mode org-indent-mode helm-mode)
+  72632
+  '(8844 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-display-time 24362 12368 40037 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
-  '((mark-ring (12846 9088 1 77059 1838 6726 6361 6362 735 13091 8951 9080 12611))))
+  '((indent-tabs-mode) (buffer-display-time 24336 61706 674369 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (9720 66132 63593 65420 5501 5501 5501 5 496 546 4032 5882 5879 2782 65814 72632))))
+
+(desktop-create-buffer 208
+  "c:/Users/Oar-5/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode override-global-mode helm-mode)
+  12211
+  '(1338 nil)
+  nil
+  nil
+  '((buffer-display-time 24336 61700 126258 0) (buffer-file-coding-system . utf-8-dos))
+  '((mark-ring (1359 1358 2567 8395 2567 8651 8677 8651 11803 11855 12211))))
+
+(desktop-create-buffer 208
+  "c:/Users/Oar-5/Dropbox/org-files/shortcuts.org"
+  "shortcuts.org"
+  'org-mode
+  '(eldoc-mode override-global-mode org-indent-mode helm-mode)
+  4525
+  '(4525 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24336 61706 674370 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (16 657 4524 4522 2552 2552 4524 674 4524 340 657 3941 4132 2552))))
 
 (desktop-create-buffer 208
   "c:/Users/Oar-5/Dropbox/org-files/personal.org"
   "personal.org"
   'org-mode
-  '(eldoc-mode override-global-mode helm-mode org-indent-mode)
-  4980
-  '(4971 nil)
+  '(eldoc-mode override-global-mode org-indent-mode helm-mode)
+  556
+  '(948 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-display-time 24362 10836 633484 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
-  '((mark-ring (7451 7451))))
+  '((indent-tabs-mode) (buffer-display-time 24336 60405 646367 0) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (1660 1701 955 7171 7171))))
 
