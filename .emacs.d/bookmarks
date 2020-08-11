@@ -49,14 +49,14 @@
  (position . 1))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/org-files/master.org")
- (front-context-string . "**** TODO  Geote")
- (rear-context-string . "     :Refiling:\n")
- (position . 6701))
+ (front-context-string . "**** TODO xx-xxx")
+ (rear-context-string . ": Coates\n:END: \n")
+ (position . 8836))
 ("org-refile-last-stored"
  (filename . "~/Dropbox/org-files/master.org")
- (front-context-string . "**** TODO  Geote")
- (rear-context-string . "NT: ASP\n:END: \n\n")
- (position . 71403))
+ (front-context-string . "**** TODO xx-xxx")
+ (rear-context-string . ": Coates\n:END: \n")
+ (position . 4759))
 ("work.org"
  (filename . "~/emacs-org/work.org")
  (front-context-string . "* LOA\n** Current")
