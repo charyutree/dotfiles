@@ -33,15 +33,15 @@
  (rear-context-string)
  (position . 1))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/org-files/personal.org")
- (front-context-string . "*** TODO Electri")
- (rear-context-string . "17 3\n - $890.88\n")
- (position . 804))
+ (filename . "~/Dropbox/org-files/master.org")
+ (front-context-string . "**** TODO 20-420")
+ (rear-context-string . "lopments\n:END: \n")
+ (position . 9332))
 ("org-refile-last-stored"
  (filename . "~/Dropbox/org-files/master.org")
- (front-context-string . "**** TODO 20-370")
- (rear-context-string . "7-16 Thu 10:18]\n")
- (position . 6492))
+ (front-context-string . "**** TODO 20-420")
+ (rear-context-string . "lopments\n:END: \n")
+ (position . 5228))
 ("work.org"
  (filename . "~/emacs-org/work.org")
  (front-context-string . "* LOA\n** Current")
