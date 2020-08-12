@@ -110,3 +110,4 @@ alias t="task"
 alias shark="sudo surfshark-vpn"
 alias readyshare="zsh ~/bin/readyshare.sh"
 alias emacs='emacsclient -nw -c -a ""'
+source /home/brent/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
