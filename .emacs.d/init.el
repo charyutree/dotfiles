@@ -87,7 +87,7 @@
  '(custom-enabled-themes (quote (gruvbox-dark-hard)))
  '(custom-safe-themes
    (quote
-    ("a99fb53a1d22ce353cab8db2fe59353781c13a4e1d90455f54f7e60c061bc9f4" "31b438533d4dd52a333eaf73d514469afcd6642bc5c9ddc7e1f7dce3c1ad9046" "ca2351121de35d810a12d32bd4ccc65b120e89927af598c0de494203f0dc57b1" "8b9d07b01f2a9566969c2049faf982cab6a4b483dd43de7fd6a016bb861f7762" "191a1493fc7c3252ae949cc42cecc454900e3d4d1feb96f480cf9d1c40c093ee" "cc49acc055b77f0bedf68cc6ce20aad47925b5c2675754fea2507975135a5bf9" "13d194a1846d5fa1226593b8b41ec5186e1f82cc3698c8ace35d777ae24ce98d" "29899ad980dce2a4c67bb2eddf6a07b6995cdcd35c51fc3d0e0f1511e9947a4c" "85d8554cd92f2b322e5e6293d446d49b71f7d95c43c2ee24bc5f958ff152ae58" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "285d1bf306091644fb49993341e0ad8bafe57130d9981b680c1dbd974475c5c7" "0fffa9669425ff140ff2ae8568c7719705ef33b7a927a0ba7c5e2ffcfac09b75" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "a06658a45f043cd95549d6845454ad1c1d6e24a99271676ae56157619952394a" "5846b39f2171d620c45ee31409350c1ccaddebd3f88ac19894ae15db9ef23035" "a37d20710ab581792b7c9f8a075fcbb775d4ffa6c8bce9137c84951b1b453016" "123a8dabd1a0eff6e0c48a03dc6fb2c5e03ebc7062ba531543dfbce587e86f2a" "e1d09f1b2afc2fed6feb1d672be5ec6ae61f84e058cb757689edb669be926896" "939ea070fb0141cd035608b2baabc4bd50d8ecc86af8528df9d41f4d83664c6a" "aded61687237d1dff6325edb492bde536f40b048eab7246c61d5c6643c696b7f" "b89ae2d35d2e18e4286c8be8aaecb41022c1a306070f64a66fd114310ade88aa" "4cf9ed30ea575fb0ca3cff6ef34b1b87192965245776afa9e9e20c17d115f3fb" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "cb8d0e6e2dbf542e29a2485526b7f1c474f8587d96daade6163273a90d34d928" "342566c9967d82f479cf8ca929ba7d23263ec67a334198d0cd8babec00a2e09b" default)))
+    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "a06658a45f043cd95549d6845454ad1c1d6e24a99271676ae56157619952394a" "5846b39f2171d620c45ee31409350c1ccaddebd3f88ac19894ae15db9ef23035" "a37d20710ab581792b7c9f8a075fcbb775d4ffa6c8bce9137c84951b1b453016" "123a8dabd1a0eff6e0c48a03dc6fb2c5e03ebc7062ba531543dfbce587e86f2a" "e1d09f1b2afc2fed6feb1d672be5ec6ae61f84e058cb757689edb669be926896" "939ea070fb0141cd035608b2baabc4bd50d8ecc86af8528df9d41f4d83664c6a" "aded61687237d1dff6325edb492bde536f40b048eab7246c61d5c6643c696b7f" "b89ae2d35d2e18e4286c8be8aaecb41022c1a306070f64a66fd114310ade88aa" "4cf9ed30ea575fb0ca3cff6ef34b1b87192965245776afa9e9e20c17d115f3fb" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "cb8d0e6e2dbf542e29a2485526b7f1c474f8587d96daade6163273a90d34d928" "342566c9967d82f479cf8ca929ba7d23263ec67a334198d0cd8babec00a2e09b" default)))
  '(elpy-shell-echo-input nil)
  '(fci-rule-color "#37474f")
  '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
@@ -115,14 +115,6 @@
     ("#282828" "#282828" "#282828" "#282828" "#282828" "#282828" "#282828" "#282828")))
  '(hl-paren-colors (quote ("#689d6a" "#d79921" "#458588" "#b16286" "#98971a")))
  '(hl-sexp-background-color "#efebe9")
- '(ledger-clear-whole-transactions t t)
- '(ledger-reports
-   (quote
-    (("a" "ledger [[ledger-mode-flags]] -f /home/brent/Ledger/journal.ldg reg Liabilities\\:Commonwealth\\:Mastercard")
-     ("account" "ledger [[ledger-mode-flags]] -f /home/brent/Ledger/journal.ldg reg Liabilities\\:Commonwealth\\:Mastercard")
-     ("bal" "%(binary) -f %(ledger-file) bal")
-     ("reg" "%(binary) -f %(ledger-file) reg")
-     ("payee" "%(binary) -f %(ledger-file) reg @%(payee)"))))
  '(lsp-ui-doc-border "#bdae93")
  '(nrepl-message-colors
    (quote
@@ -134,7 +126,7 @@
  '(org-contacts-files (quote ("~/Dropbox/org-files/contacts.org")))
  '(package-selected-packages
    (quote
-    (flycheck-ledger ledger-mode color-theme-sanityinc-tomorrow monokai-pro-theme hc-zenburn-theme gruvbox-theme solarized-theme org-super-agenda powershell orgtbl-ascii-plot jedi use-package helm magit pyenv-mode material-theme exec-path-from-shell elpy better-defaults)))
+    (color-theme-sanityinc-tomorrow monokai-pro-theme hc-zenburn-theme gruvbox-theme solarized-theme org-super-agenda powershell orgtbl-ascii-plot jedi use-package helm magit pyenv-mode material-theme exec-path-from-shell elpy better-defaults)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#32302f")
  '(pos-tip-foreground-color "#bdae93")
@@ -230,14 +222,7 @@
 	("b" "Bill" entry (file+olp "~/Dropbox/org-files/personal.org" "Tasks" "Bills")
 	 "* TODO %^{Description} \n - %?")
 
-	("p" "Personal Task Refiling" entry (file+olp "~/Dropbox/org-files/personal.org" "Tasks" "Refiling") "* TODO %^{Description} \n - %?")
-
-	("P" "Personal Note Refiling" entry (file+olp "~/Dropbox/org-files/personal.org" "Misc" "Notes") "* %u \n -%?")
-
-	("t" "Pool Test Log" table-line (file+olp "~/Dropbox/org-files/personal.org" "Tasks" "Home" "Pool" "Test Results")
-	 "|%^{Date|%t}|%^{CYA|NA}|%^{FC|NA}|%^{CC|NA}|%^{PH|NA}|%^{TA|NA}|%^{CH|NA}|%^{SALT|NA}|%^{NOTES|NA}|")
-
-	
+	("p" "Personal Refiling" entry (file+olp "~/Dropbox/org-files/master.org" "Work" "LOA" "Refiling") "* TODO %^{Description} \n - %?")
 	
 ))
 	
@@ -308,7 +293,7 @@
   :ensure t )
 
 (setq org-agenda-custom-commands
-      '(("z" "Complete Custom view"
+      '(("z" "Custom  view"
          ((agenda "" ((org-agenda-span 'day)
 		      (org-deadline-warning-days 90)
                       (org-super-agenda-groups
@@ -369,42 +354,18 @@
 					  :todo "HOLD"))
 			  (:name "Unscheduled Work"
 				 :and(
-				      :not(:scheduled t :deadline t :tag "Admin" :tag "Reminders" :tag "Refiling")
+				      :not(:scheduled t :deadline t :tag "Admin" :tag "Reminders")
 
 				  :todo t
 				  
 				  ))
-			  (:name "Refiling"
-				 :tag "Refiling")
 			  (:name "Admin"
 				 :tag "Admin")
 			  (:discard (:anything t))
 				     
-			  )))))))
-
-    
-      )
+				 ))))))))
 
 (setq org-agenda-start-with-log-mode t)
 (setq org-agenda-block-separator nil)
 (setq org-agenda-compact-blocks t)
 (org-super-agenda-mode) 
-
-;; Enable ledger mode
-(use-package ledger-mode
-    :mode ("\\.dat\\'"
-           "\\.ldg\\'")
-    :custom (ledger-clear-whole-transactions t)
-    :ensure t)
-       
-(use-package flycheck-ledger :after ledger-mode)
-
-(defun AUD()
-  (interactive)
-  (beginning-of-buffer)
-  (replace-regexp (-?[0-9]*\.[0-9]+$) (\& AUD))
-  )
-
-(global-set-key (kbd "C-c C-1") 'AUD)
-
-;; babel mode customisation
