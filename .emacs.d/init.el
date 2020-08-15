@@ -42,19 +42,19 @@
 (require 'org-habit)
 (set 'org-habit-graph-column 60)
 
-;;Enable evil-leader
-(unless (package-installed-p 'evil-leader)
-  (package-install 'evil-leader))
-(require 'evil-leader)
-(global-evil-leader-mode)
-
-;; Enable evil mode
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
-
-;; Enable Evil
-(require 'evil)
-(evil-mode 1)
+;; enable evil and evil collection 
+(use-package evil
+  :ensure t
+  :init
+  (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1))
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
 ;; Agenda file list
 (setq org-agenda-files '("~/Dropbox/org-files/"))
@@ -91,7 +91,7 @@
  '(ansi-color-names-vector
    (vector "#ffffff" "#f36c60" "#8bc34a" "#fff59d" "#4dd0e1" "#b39ddb" "#81d4fa" "#263238"))
  '(ansi-term-color-vector
-   [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#a1efe4" "#fcfcfa"])
+   [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#a1efe4" "#fcfcfa"] t)
  '(beacon-color "#c82829")
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
@@ -377,30 +377,64 @@
 (setq org-agenda-compact-blocks t)
 (org-super-agenda-mode) 
 
-;; Evil-Leader keybindings``
-(evil-leader/set-leader "<SPC>")
-(evil-leader/set-key
-  "f" 'find-file
-  "b" 'switch-to-buffer
-  "o" 'other-window
-  "3" 'split-window-right
-  "2" 'split-window-below
-  "]" 'enlarge-window-horizontally
-  "[" 'shrink-window-horizontally
-  "k" 'kill-buffer
-  "r" 'helm-filtered-bookmarks
-  "na" 'org-agenda
-  "nc" 'org-capture
-  "nw" 'org-refile
-  "nd" 'org-deadline
-  "ns" 'org-schedule
-  "e" 'unfold-4
-  "w" 'unfold-3
-  "s" 'save-buffer
-  "0" 'delete-window
-  "mb" 'eval-buffer)
+(require 'general)
 
-;;enable evil-org-mode
+;; ;; Evil-Leader keybindings``
+;; (evil-leader/set-leader "<SPC>")
+;; (evil-leader/set-key
+
+;; ;;enable evil-org-mode
+;; (use-package evil-org
+;;   :ensure t
+;;   :after org
+;;   :config
+;;   (add-hook 'org-mode-hook 'evil-org-mode)
+;;   (add-hook 'evil-org-mode-hook
+;;             (lambda ()
+;;               (evil-org-set-key-theme '(textobjects insert navigation additional shift todo heading))
+;;   (require 'evil-org-agenda)
+;;   (evil-org-agenda-set-keys)
+  
+;;   )))
+
+
+;; General custom keybindings 
+(require 'general)
+
+;;global normal mode keybindings
+(general-define-key
+ :states 'normal 
+ :prefix ","
+ 
+ "f" 'helm-find-files
+ "b" 'switch-to-buffer
+ "o" 'other-window
+ "3" 'split-window-right
+ "2" 'split-window-below
+ "]" 'enlarge-window-horizontally
+ "[" 'shrink-window-horizontally
+ "k" 'kill-buffer
+ "r" 'helm-filtered-bookmarks
+ "na" 'org-agenda
+ "nc" 'org-capture
+ "nw" 'org-refile
+ "nd" 'org-deadline
+ "ns" 'org-schedule
+ "e" 'unfold-4
+ "w" 'unfold-3
+ "s" 'save-buffer
+ "0" 'delete-window
+ "mb" 'eval-buffer
+ "c" 'comment-region
+ "u" 'uncomment-region
+ "x" 'helm-M-x
+ )
+ 
+
+;; open org-agenda initially in normal state
+(evil-set-initial-state 'org-agenda-mode 'normal)
+
+;; enable evil-org plugin
 (use-package evil-org
   :ensure t
   :after org
@@ -408,11 +442,6 @@
   (add-hook 'org-mode-hook 'evil-org-mode)
   (add-hook 'evil-org-mode-hook
             (lambda ()
-              (evil-org-set-key-theme '(textobjects insert navigation additional shift todo heading))
+              (evil-org-set-key-theme)))
   (require 'evil-org-agenda)
-  (evil-org-agenda-set-keys)
-  
-  )))
-
-;; open org-agenda initially in normal state
-(evil-set-initial-state 'org-agenda-mode 'normal)
+  (evil-org-agenda-set-keys))
