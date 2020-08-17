@@ -7,6 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 #add python scripts to path
 export PATH=/home/brent/.local/bin:$PATH
 
+#add ~/.emacs.d/bin to path
+export PATH=/home/brent/.emacs.d/bin:$PATH
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
