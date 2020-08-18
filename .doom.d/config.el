@@ -19,17 +19,18 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "Fira Code" :size 12))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
+
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-vibrant)
+;;(doom-themes-org-config)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Dropbox/org-files")
+(setq org-directory "~/Dropbox/org-files/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -144,3 +145,50 @@
   (interactive)
   (outline-hide-sublevels 3))
 
+;; Associate .xls, .xlsx, .doc, .docx files with system defaults in org mode
+(add-to-list 'org-file-apps '("\\.xls\\'" . default))
+(add-to-list 'org-file-apps '("\\.xlsx\\'" . default))
+(add-to-list 'org-file-apps '("\\.doc\\'" . default))
+(add-to-list 'org-file-apps '("\\.docx\\'" . default))
+
+;; Follow links in same window
+(setq org-link-frame-setup '((file . find-file)))
+
+;; Add custom keybindings for Org-Mode
+
+(map! :map evil-org-mode-map
+      :leader
+      :after org
+      :n "n 4" #'unfold-4
+      :n "n 3" #'unfold-3
+ )
+
+;; set global line spacing
+(setq line-spacing 0.2)
+
+(defun my/org-mode-hook ()
+  "Stop the org-level headers from increasing in height relative to the other text."
+  (dolist (face '(org-level-1
+                  org-level-2
+                  org-level-3
+                  org-level-4
+                  org-level-5))
+    (set-face-attribute face nil :weight 'normal :height 1.0)))
+
+(add-hook 'org-mode-hook 'my/org-mode-hook)
+
+
+;;add org-todo states
+(setq org-todo-keywords
+      '((sequence "TODO" "CHECKING" "NEXT" "HOLD" "DRAFTING" "|" "FEEDBACK" "DONE" "CANCELLED")))
+
+(setq org-todo-keyword-faces
+      '(("TODO" . "firebrick" )
+        ("CHECKING" . "DarkOrange")
+        ("NEXT" . "DeepSkyBlue")
+        ("HOLD" . "tan")
+        ("DRAFTING" . "coral")
+        ("FEEDBACK" . "OliveDrab")
+        ("DONE" . "LimeGreen")
+        ("CANCELLED" . "purple1")
+        ))

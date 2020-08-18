@@ -112,4 +112,6 @@ alias c="clear"
 alias t="task"
 alias shark="sudo surfshark-vpn"
 alias readyshare="zsh ~/bin/readyshare.sh"
-alias emacs='emacsclient -nw -c -a ""'
+
+# Add setup for windows X server for use on WSL2
+export DISPLAY=localhost:0.0

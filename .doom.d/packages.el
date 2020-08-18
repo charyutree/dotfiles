@@ -50,3 +50,7 @@
 ;(unpin! t)
 
 (package! org-super-agenda)
+
+
+(package! org-pretty-table-mode
+  :recipe (:host github :repo "Fuco1/org-pretty-table") :pin "88380f865a...")
