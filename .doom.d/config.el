@@ -19,7 +19,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Fira Code" :size 12))
+(setq doom-font (font-spec :family "DejaVuSansMono" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -183,7 +183,7 @@
       '((sequence "TODO" "CHECKING" "NEXT" "HOLD" "DRAFTING" "|" "FEEDBACK" "DONE" "CANCELLED")))
 
 (setq org-todo-keyword-faces
-      '(("TODO" . "firebrick" )
+      '(("TODO" . "IndianRed" )
         ("CHECKING" . "DarkOrange")
         ("NEXT" . "DeepSkyBlue")
         ("HOLD" . "tan")
@@ -191,4 +191,39 @@
         ("FEEDBACK" . "OliveDrab")
         ("DONE" . "LimeGreen")
         ("CANCELLED" . "purple1")
+        ("MEETING" . "magneta1")
         ))
+
+;; Add capture template
+(setq org-capture-templates 
+  (doct '(("LOA Work" :keys "w"
+           :children
+           (("Project" :keys "p"
+             :children (("New" :keys "n"
+             :type entry
+             :file "~/Dropbox/org-files/master.org"
+             :olp ("Work" "LOA" "Active Projects")
+             :template ("* TODO %^{Job Number} // %^{Description}" 
+                         ":PROPERTIES:"
+                         ":Created: %U" 
+                         ":Job Number: %\\1"
+                         ":END:"
+                         "%?"))
+                       )))) 
+           ("Quick Refiling" :keys "n"
+            :type entry
+            :file "~/Dropbox/org-files/master.org"
+            :olp ("Work" "LOA" "Refiling")
+            :template ("* TODO %^{Description}"
+                       ":PROPERTIES:"
+                       ":Created: %U"
+                       ":END:"
+                       "%?"))
+           )))
+            
+             
+             
+             
+;; Show matching parenthesis by default
+(setq show-paren-mode 1)
+
