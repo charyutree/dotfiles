@@ -59,6 +59,7 @@
       '(("z" "Custom  view"
          ((agenda "" ((org-agenda-span 'day)
 		      (org-deadline-warning-days 90)
+                      (org-agenda-start-day "0d")
                       (org-super-agenda-groups
                        '((:log t)
 			 (:name "Scheduled Today"
@@ -208,7 +209,15 @@
                          ":Created: %U" 
                          ":Job Number: %\\1"
                          ":END:"
-                         "%?"))
+                         "%?"
+                         "* Subtasks"))
+                        ("Subtask within existing heading" :keys "s"
+                         :type entry
+                         :function (lambda() (get-org-id-from-heading))
+                         :template ("* TODO %^{Description}")
+
+                         )
+
                        )))) 
            ("Quick Refiling" :keys "n"
             :type entry
@@ -219,11 +228,30 @@
                        ":Created: %U"
                        ":END:"
                        "%?"))
-           )))
+           ("ASP" :keys "a"
+            :type entry
+            :file "~/Dropbox/org-files/master.org"
+            :olp ("Work" "ASP" "Current")
+            :template ("* TODO %^{Job Number} // %^{Description}"
+                         ":PROPERTIES:"
+                         ":Created: %U"
+                         ":Job Number: %\\1"
+                         ":END:"
+                         "%?"))
+
+
+           )
+        ))
             
-             
+
              
              
 ;; Show matching parenthesis by default
 (setq show-paren-mode 1)
 
+;; Define function to interactively locate existing org heading to assign subtasks
+(defun get-org-id-from-heading ()
+  (interactive)
+  (org-id-get-create
+   (helm-org-rifle)
+  ))
