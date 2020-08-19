@@ -181,45 +181,58 @@
 
 ;;add org-todo states
 (setq org-todo-keywords
-      '((sequence "TODO" "CHECKING" "NEXT" "HOLD" "DRAFTING" "|" "FEEDBACK" "DONE" "CANCELLED")))
+      '((sequence "TODO(t)" "NEXT(n)" "CHECKING(c)" "|" "DRAFTING(D)" "FEEDBACK(f)" "HOLD(h)"  "DONE(d)" "CANCELLED(C)")
+        (sequence "PROJECT(p)" "|" "ISSUED(i)")
+        (sequence "MEETING(m)" "SITE(s)" "|" "DONE(d)" )))
+
 
 (setq org-todo-keyword-faces
-      '(("TODO" . "IndianRed" )
-        ("CHECKING" . "DarkOrange")
+      '(("TODO" . "firebrick" )
+        ("CHECKING" . "goldenrod")
+        ("DRAFTING" . "CornFlowerBlue")
+        ("FEEDBACK" . "CadetBlue")
+        ("HOLD" . "moccasin")
+        ("DONE" . "ForestGreen")
+        ("CANCELLED" . "SlateGrey")
+        ("PROJECT" . "coral")
+        ("ISSUED" . "ForestGreen")
         ("NEXT" . "DeepSkyBlue")
-        ("HOLD" . "tan")
-        ("DRAFTING" . "coral")
-        ("FEEDBACK" . "OliveDrab")
-        ("DONE" . "LimeGreen")
-        ("CANCELLED" . "purple1")
-        ("MEETING" . "magneta1")
+        ("MEETING" . "salmon")
+        ("SITE" . "salmon")
         ))
 
 ;; Add capture template
-(setq org-capture-templates 
+(setq org-capture-templates
   (doct '(("LOA Work" :keys "w"
-           :children
-           (("Project" :keys "p"
-             :children (("New" :keys "n"
-             :type entry
-             :file "~/Dropbox/org-files/master.org"
-             :olp ("Work" "LOA" "Active Projects")
-             :template ("* TODO %^{Job Number} // %^{Description}" 
-                         ":PROPERTIES:"
-                         ":Created: %U" 
-                         ":Job Number: %\\1"
-                         ":END:"
-                         "%?"
-                         "* Subtasks"))
-                        ("Subtask within existing heading" :keys "s"
-                         :type entry
-                         :function (lambda() (get-org-id-from-heading))
-                         :template ("* TODO %^{Description}")
+           :children (("Project" :keys "p"
+                       :children (("New" :keys "n"
+                                   :type entry
+                                   :file "~/Dropbox/org-files/master.org"
+                                   :olp ("Work" "LOA" "Active Projects / Tasks")
+                                   :template ("* PROJECT %^{Job Number} // %^{Description} [%]"
+                                              ":PROPERTIES:"
+                                              ":Created: %U"
+                                              ":CATEGORY: %\\1"
+                                              ":END:"
+                                              "* Notes"
+                                              "%?"
+                                              "* Subtasks"))
+                                  ("Subtask within existing heading" :keys "t"
+                                   :type entry
+                                   :function (lambda() (get-org-id-from-heading))
+                                   :template ("* TODO %^{Description}"))))
+                      ("Task" :keys "t"
+                       :type entry
+                       :file "~/Dropbox/org-files/master.org"
+                       :olp ("Work" "LOA" "Active Projects / Tasks")
+                       :template ("* TODO %^{Description}"
+                                  ":PROPERTIES:"
+                                  ":Created: %U"
+                                  ":END:"
+                                  "%?"))
+                      ))
 
-                         )
-
-                       )))) 
-           ("Quick Refiling" :keys "n"
+           ("Quick Refiling Note" :keys "n"
             :type entry
             :file "~/Dropbox/org-files/master.org"
             :olp ("Work" "LOA" "Refiling")
@@ -228,24 +241,38 @@
                        ":Created: %U"
                        ":END:"
                        "%?"))
+
            ("ASP" :keys "a"
-            :type entry
-            :file "~/Dropbox/org-files/master.org"
-            :olp ("Work" "ASP" "Current")
-            :template ("* TODO %^{Job Number} // %^{Description}"
-                         ":PROPERTIES:"
-                         ":Created: %U"
-                         ":Job Number: %\\1"
-                         ":END:"
-                         "%?"))
+            :children (("Project" :keys "p"
+                       :children (("New" :keys "n"
+                                    :type entry
+                                    :file "~/Dropbox/org-files/master.org"
+                                    :olp ("Work" "ASP" "Active Projects / Tasks")
+                                    :template ("* PROJECT %^{Job Number} // %^{Description} [%]"
+                                               ":PROPERTIES:"
+                                               ":Created: %U"
+                                               ":CATEGORY: %\\1"
+                                               ":END:"
+                                               "* Notes"
+                                               "%?"
+                                               "* Subtasks"))
 
+                                  ("Subtask within existing heading" :keys "t"
+                                   :type entry
+                                   :function (lambda() (get-org-id-from-heading))
+                                   :template ("* TODO %^{Description}"))))
 
-           )
-        ))
-            
+                      ("Task" :keys "t"
+                       :type entry
+                       :file "~/Dropbox/org-files/master.org"
+                       :olp ("Work" "LOA" "Active Projects / Tasks")
+                       :template ("* TODO %^{Description}"
+                                  ":PROPERTIES:"
+                                  ":Created: %U"
+                                  ":END:"
+                                  "%?"))))
+            )))
 
-             
-             
 ;; Show matching parenthesis by default
 (setq show-paren-mode 1)
 
