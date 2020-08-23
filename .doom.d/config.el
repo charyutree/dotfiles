@@ -286,3 +286,6 @@
   (org-id-get-create
    (helm-org-rifle)
   ))
+
+; Enable ledger-mode for all files with .ldg extension
+(add-to-list 'auto-mode-alist '("\\.ldg" . ledger-mode))
