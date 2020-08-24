@@ -55,6 +55,7 @@
 ;; they are implemented.
 
 ;; Customise org-super-agenda`
+(after! org
 (setq org-agenda-custom-commands
       '(("z" "Custom  view"
          ((agenda "" ((org-agenda-span 'day)
@@ -71,9 +72,7 @@
 				     :not(:tag "Bills" :tag "Reminders" :todo "HOLD" :todo "FEEDBACK")
 				:deadline today
 				))
-			 (:name "Scheduled Inspections"
-				  :tag "Inspections"
-				  :order 5)
+
 			 (:name "Overdue"
 			        :and(
 				     :not(:tag "Bills" :tag "Reminders" :todo "HOLD" :todo "FEEDBACK")
@@ -96,7 +95,13 @@
 
 				  :and(
 				       :deadline t
-						 :tag ("Reminders"))
+                                       :tag ("Reminders"))
+                                  :and(
+                                       :scheduled t
+                                       :tag ("Bills"))
+                                  :and(
+                                       :scheduled t
+                                       :tag ("Reminders"))
 
 				  )))))
 
@@ -108,6 +113,10 @@
 				      :not(:scheduled t :deadline t)
 				  :todo "CHECKING"
 				  ))
+
+			 (:name "Scheduled Inspections"
+                              :todo "SITE")
+
 			  (:name "Jobs being Drafted"
 				 :and(
 				      :not(:scheduled t :deadline t)
@@ -128,7 +137,7 @@
 			  (:discard (:anything t))
 
 				 ))))))))
-
+  )
 (setq org-agenda-start-with-log-mode t)
 (setq org-agenda-block-separator nil)
 (setq org-agenda-compact-blocks t)
@@ -180,11 +189,11 @@
 
 
 ;;add org-todo states
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "NEXT(n)" "CHECKING(c)" "|" "DRAFTING(D)" "FEEDBACK(f)" "HOLD(h)"  "DONE(d)" "CANCELLED(C)")
-        (sequence "PROJECT(p)" "|" "ISSUED(i)")
-        (sequence "MEETING(m)" "SITE(s)" "|" "DONE(d)" )))
-
+(after! org
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "NEXT(n)" "CHECKING(c)" "DRAFTING(D)" "FEEDBACK(f)" "HOLD(h)" "|"  "DONE(d)" "CANCELLED(C)")
+          (sequence "PROJECT(p)" "|" "ISSUED(i)")
+          (sequence "MEETING(m)" "SITE(s)" "|" "DONE(d)" ))))
 
 (setq org-todo-keyword-faces
       '(("TODO" . "firebrick" )
@@ -272,7 +281,6 @@
                                   ":END:"
                                   "%?"))))
             )))
-
 ;; Show matching parenthesis by default
 (setq show-paren-mode 1)
 
