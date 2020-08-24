@@ -1,4 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -142,13 +143,8 @@
   (outline-hide-sublevels 4))
 
 (defun unfold-3()
-
   (interactive)
   (outline-hide-sublevels 3))
-
-;; Define custom functions to open Windows apps from within WSL
-(defun open-xls(filepath)
-  (setq cmd_prefix "/mnt/c/Windows/System32/cmd.exe"))
 
 ;; Associate .xls, .xlsx, .doc, .docx files with system defaults in org mode
 (add-to-list 'org-file-apps '("\\.xls\\'" . default))
