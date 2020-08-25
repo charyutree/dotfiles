@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 accounts:
   cba-mastercard:
     a: Liabilities:Commonwealth:Mastercard
@@ -63,62 +62,3 @@ accounts:
     j: /home/brent/Ledger/main.dat
     o: /home/brent/Ledger/csv/Commbank/Mojo/out/out.ldg
  
-=======
-accounts:
-  cba-mastercard:
-    a: Liabilities:Commonwealth:Mastercard
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/Commbank/Mastercard/out/out.ldg
-
-  cba-smart-access:
-    a: Assets:Bank:Commonwealth:Smart Access
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/Commbank/Smart-Access/out/out.ldg
-
-  cba-offset:
-    a: Assets:Bank:Commonwealth:Offset
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/Commbank/Offset/out/out.ldg
-
-  cba-home-loan:
-    a: Liabilities:Commonwealth:Home Loan
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/Commbank/Home-Loan/out/out.ldg
-
-  ing-living-expenses:
-    a: Assets:Bank:ING:Living Expenses
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/ING/Living-Expenses/out/out.ldg
- 
-  ing-splurge:
-    a: Assets:Bank:ING:Splurge
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/ING/Splurge/out/out.ldg
- 
-  ing-smile:
-    a: Assets:Bank:ING:Smile
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/ING/Smile/out/out.ldg
- 
-  cba-mojo:
-    a: Assets:Bank:Commonwealth:Mojo
-    c: AUD 
-    d: 02/01/2006
-    j: /home/brent/Ledger/main.dat
-    o: /home/brent/Ledger/csv/Commbank/Mojo/out/out.ldg
- 
->>>>>>> ac77d0318b315b8f6c2a72bff0c54541b9af11db
