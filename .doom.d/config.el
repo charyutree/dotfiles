@@ -223,9 +223,9 @@
                                               ":Created: %U"
                                               ":CATEGORY: %\\1"
                                               ":END:"
-                                              "* Notes"
+                                              "** Notes"
                                               "%?"
-                                              "* Subtasks"))
+                                              "** Subtasks"))
                                   ("Subtask within existing heading" :keys "t"
                                    :type entry
                                    :function (lambda() (get-org-id-from-heading))
@@ -262,9 +262,9 @@
                                                ":Created: %U"
                                                ":CATEGORY: %\\1"
                                                ":END:"
-                                               "* Notes"
+                                               "** Notes"
                                                "%?"
-                                               "* Subtasks"))
+                                               "** Subtasks"))
 
                                   ("Subtask within existing heading" :keys "t"
                                    :type entry
@@ -293,3 +293,4 @@
 
 ; Enable ledger-mode for all files with .ldg extension
 (add-to-list 'auto-mode-alist '("\\.ldg" . ledger-mode))
+
