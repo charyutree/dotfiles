@@ -25,8 +25,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-vibrant)
-;;(doom-themes-org-config)
+(setq doom-theme 'doom-dark+)
+(doom-themes-org-config)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -174,7 +174,7 @@
  )
 
 ;; set global line spacing
-(setq line-spacing 0.2)
+  (setq line-spacing 0.2)
 
 (defun my/org-mode-hook ()
   "Stop the org-level headers from increasing in height relative to the other text."
@@ -183,9 +183,16 @@
                   org-level-3
                   org-level-4
                   org-level-5))
-    (set-face-attribute face nil :weight 'normal :height 1.0)))
+    (set-face-attribute face nil :weight 'normal :height 1.0))
+  (setq line-spacing 0.2)
+  (unfold-4))
+
+(defun my/agenda-hook ()
+  (setq line-spacing 0.2))
 
 (add-hook 'org-mode-hook 'my/org-mode-hook)
+(add-hook 'org-agenda-mode-hook 'my/agenda-hook)
+
 
 
 ;;add org-todo states
@@ -234,9 +241,21 @@
                        :type entry
                        :file "~/Dropbox/org-files/master.org"
                        :olp ("Work" "LOA" "Active Projects / Tasks")
-                       :template ("* TODO %^{Description}"
+                       :template ("* TODO %^{Job Number} // %^{Description}"
                                   ":PROPERTIES:"
                                   ":Created: %U"
+                                  ":CATEGORY: %\\1"
+                                  ":END:"
+                                  "%?"))
+
+                      ("Inspection" :keys "i"
+                       :type entry
+                       :file "~/Dropbox/org-files/master.org"
+                       :olp ("Work" "LOA" "Appointments")
+                       :template ("* SITE %^{Job Number} // %^{Description}"
+                                  ":PROPERTIES:"
+                                  ":Created: %U"
+                                  ":CATEGORY: %\\1"
                                   ":END:"
                                   "%?"))
                       ))

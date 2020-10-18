@@ -57,3 +57,4 @@
 
 (package! doct)
 (package! helm-org-rifle)
+(package! cython-mode)
