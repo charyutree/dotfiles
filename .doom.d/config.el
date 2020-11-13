@@ -299,6 +299,14 @@
                                   ":Created: %U"
                                   ":END:"
                                   "%?"))))
+           ("Personal" :keys "p"
+            :children (("Bill" :keys "b"
+                        :type entry
+                        :file "/Dropbox/org-files/personal.org"
+                        :olp ("Tasks" "Bills")
+                        :template ("* TODO %^{Description}"
+                                   "Amount: %^{Amount}"
+                                   "%?"))))
             )))
 ;; Show matching parenthesis by default
 (setq show-paren-mode 1)
@@ -313,3 +321,6 @@
 ; Enable ledger-mode for all files with .ldg extension
 (add-to-list 'auto-mode-alist '("\\.ldg" . ledger-mode))
 
+; Reduce lag on leader key help menu
+(require 'which-key)
+(setq which-key-idle-delay 0.1)
