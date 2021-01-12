@@ -114,4 +114,8 @@ alias shark="sudo surfshark-vpn"
 alias readyshare="zsh ~/bin/readyshare.sh"
 
 # Add setup for windows X server for use on WSL2
-export DISPLAY=localhost:0.0
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+export LIBGL_ALWAYS_INDIRECT=1
+
+# set GDK scale 
+export GDK_SCALE=2
