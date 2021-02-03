@@ -25,12 +25,14 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dark+)
+(setq doom-theme 'doom-gruvbox)
+(setq doom-gruvbox-dark-variant "hard")
+(setq doom-gruvbox-brighter-comments nil)
 (doom-themes-org-config)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Dropbox/org-files/")
+(setq org-directory "~/Seafile/org-files/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -160,6 +162,7 @@
 (add-to-list 'org-file-apps '("\\.xlsx\\'" . default))
 (add-to-list 'org-file-apps '("\\.doc\\'" . default))
 (add-to-list 'org-file-apps '("\\.docx\\'" . default))
+(add-to-list 'org-file-apps '("\\.pdf\\'" . "cmd.exe \\c \"%s\""))
 
 ;; Follow links in same window
 (setq org-link-frame-setup '((file . find-file)))
@@ -223,7 +226,7 @@
            :children (("Project" :keys "p"
                        :children (("New" :keys "n"
                                    :type entry
-                                   :file "~/Dropbox/org-files/master.org"
+                                   :file "~/Seafile/org-files/master.org"
                                    :olp ("Work" "LOA" "Active Projects / Tasks")
                                    :template ("* PROJECT %^{Job Number} // %^{Description} [%]"
                                               ":PROPERTIES:"
@@ -239,7 +242,7 @@
                                    :template ("* TODO %^{Description}"))))
                       ("Task" :keys "t"
                        :type entry
-                       :file "~/Dropbox/org-files/master.org"
+                       :file "~/Seafile/org-files/master.org"
                        :olp ("Work" "LOA" "Active Projects / Tasks")
                        :template ("* TODO %^{Job Number} // %^{Description}"
                                   ":PROPERTIES:"
@@ -250,7 +253,7 @@
 
                       ("Inspection" :keys "i"
                        :type entry
-                       :file "~/Dropbox/org-files/master.org"
+                       :file "~/Seafile/org-files/master.org"
                        :olp ("Work" "LOA" "Appointments")
                        :template ("* SITE %^{Job Number} // %^{Description}"
                                   ":PROPERTIES:"
@@ -262,19 +265,27 @@
 
            ("Quick Refiling Note" :keys "n"
             :type entry
-            :file "~/Dropbox/org-files/master.org"
+            :file "~/Seafile/org-files/master.org"
             :olp ("Work" "LOA" "Refiling")
             :template ("* TODO %^{Description}"
                        ":PROPERTIES:"
                        ":Created: %U"
                        ":END:"
                        "%?"))
-
+           ("Admin Task" :keys "A"
+            :type entry
+            :file "~/Seafile/org-files/master.org"
+            :olp ("Work" "LOA" "Admin")
+            :template ("* TODO %^{Description}"
+                       ":PROPERTIES:"
+                       ":Created: %U"
+                       ":END:"
+                       "%?"))
            ("ASP" :keys "a"
             :children (("Project" :keys "p"
                        :children (("New" :keys "n"
                                     :type entry
-                                    :file "~/Dropbox/org-files/master.org"
+                                    :file "~/Seafile/org-files/master.org"
                                     :olp ("Work" "ASP" "Active Projects / Tasks")
                                     :template ("* PROJECT %^{Job Number} // %^{Description} [%]"
                                                ":PROPERTIES:"
@@ -292,8 +303,8 @@
 
                       ("Task" :keys "t"
                        :type entry
-                       :file "~/Dropbox/org-files/master.org"
-                       :olp ("Work" "LOA" "Active Projects / Tasks")
+                       :file "~/Seafile/org-files/master.org"
+                       :olp ("Work" "ASP" "Active Projects / Tasks")
                        :template ("* TODO %^{Description}"
                                   ":PROPERTIES:"
                                   ":Created: %U"
@@ -302,7 +313,7 @@
            ("Personal" :keys "p"
             :children (("Bill" :keys "b"
                         :type entry
-                        :file "/Dropbox/org-files/personal.org"
+                        :file "/Seafile/org-files/personal.org"
                         :olp ("Tasks" "Bills")
                         :template ("* TODO %^{Description}"
                                    "Amount: %^{Amount}"
@@ -324,3 +335,46 @@
 ; Reduce lag on leader key help menu
 (require 'which-key)
 (setq which-key-idle-delay 0.1)
+
+; Set longitude and latitude for org agenda
+(setq calendar-latitude -28.016666)
+(setq calendar-longitude 153.399994)
+
+;; add sunrise and sunset to agenda
+(defun solar-sunrise-string (date &optional nolocation)
+  "String of *local* time of sunrise and daylight on Gregorian DATE."
+  (let ((l (solar-sunrise-sunset date)))
+    (format
+     "%s (%s hours daylight)"
+     (if (car l)
+     (concat "Sunrise " (apply 'solar-time-string (car l)))
+       "no sunrise")
+     (nth 2 l)
+     )))
+;; To be called from diary-list-sexp-entries, where DATE is bound.
+;;;###diary-autoload
+(defun diary-sunrise ()
+  "Local time of sunrise as a diary entry.
+  Accurate to a few seconds."
+  (or (and calendar-latitude calendar-longitude calendar-time-zone)
+      (solar-setup))
+  (solar-sunrise-string date))
+  (defun solar-sunset-string (date &optional nolocation)
+  "String of *local* time of sunset and daylight on Gregorian DATE."
+  (let ((l (solar-sunrise-sunset date)))
+    (format
+     "%s (%s hours daylight)"
+     (if (cadr l)
+     (concat "Sunset " (apply 'solar-time-string (cadr l)))
+       "no sunset")
+     (nth 2 l)
+     )))
+;; To be called from diary-list-sexp-entries, where DATE is bound.
+;;;###diary-autoload
+(defun diary-sunset ()
+  "Local time of sunset as a diary entry.
+  Accurate to a few seconds."
+  (or (and calendar-latitude calendar-longitude calendar-time-zone)
+      (solar-setup))
+  (solar-sunset-string date))
+  (provide 'sunrise-sunset)
