@@ -27,6 +27,7 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-gruvbox)
 (setq doom-gruvbox-dark-variant "hard")
+(custom-set-faces! '(default :background "gray15"))
 (setq doom-gruvbox-brighter-comments nil)
 (doom-themes-org-config)
 
@@ -253,14 +254,13 @@
 
                       ("Inspection" :keys "i"
                        :type entry
-                       :file "~/Seafile/org-files/master.org"
-                       :olp ("Work" "LOA" "Appointments")
+                       :file "~/Seafile/org-files/work-appointments.org"
                        :template ("* SITE %^{Job Number} // %^{Description}"
                                   ":PROPERTIES:"
                                   ":Created: %U"
                                   ":CATEGORY: %\\1"
                                   ":END:"
-                                  "%?"))
+                                  "%^T"))
                       ))
 
            ("Quick Refiling Note" :keys "n"
@@ -313,11 +313,17 @@
            ("Personal" :keys "p"
             :children (("Bill" :keys "b"
                         :type entry
-                        :file "/Seafile/org-files/personal.org"
+
+                        :file "~/Seafile/org-files/personal.org"
                         :olp ("Tasks" "Bills")
                         :template ("* TODO %^{Description}"
                                    "Amount: %^{Amount}"
-                                   "%?"))))
+                                   "%?"))
+                       ("Calendar Entry" :keys "c"
+                        :type entry
+                        :file "~/Seafile/org-files/personal-appointments.org"
+                        :template ("* %^{Description}"
+                                   "%^T"))))
             )))
 ;; Show matching parenthesis by default
 (setq show-paren-mode 1)
@@ -339,10 +345,8 @@
 ; Set longitude and latitude for org agenda
 (setq calendar-latitude -28.016666)
 (setq calendar-longitude 153.399994)
-
 ;; add sunrise and sunset to agenda
 (defun solar-sunrise-string (date &optional nolocation)
-  "String of *local* time of sunrise and daylight on Gregorian DATE."
   (let ((l (solar-sunrise-sunset date)))
     (format
      "%s (%s hours daylight)"
@@ -354,13 +358,10 @@
 ;; To be called from diary-list-sexp-entries, where DATE is bound.
 ;;;###diary-autoload
 (defun diary-sunrise ()
-  "Local time of sunrise as a diary entry.
-  Accurate to a few seconds."
   (or (and calendar-latitude calendar-longitude calendar-time-zone)
       (solar-setup))
   (solar-sunrise-string date))
   (defun solar-sunset-string (date &optional nolocation)
-  "String of *local* time of sunset and daylight on Gregorian DATE."
   (let ((l (solar-sunrise-sunset date)))
     (format
      "%s (%s hours daylight)"
@@ -372,9 +373,57 @@
 ;; To be called from diary-list-sexp-entries, where DATE is bound.
 ;;;###diary-autoload
 (defun diary-sunset ()
-  "Local time of sunset as a diary entry.
-  Accurate to a few seconds."
   (or (and calendar-latitude calendar-longitude calendar-time-zone)
       (solar-setup))
   (solar-sunset-string date))
   (provide 'sunrise-sunset)
+;; custom level 3 font colour(custom-theme-set-faces 'user
+`(org-level-3 ((t (:foreground "chocolate1"))))
+
+;; Disable section numbers on org export
+(setq org-export-with-section-numbers nil)
+
+;; Org-Caldav Setup for Radicale server
+ (setq org-caldav-url "https://charyutree.duckdns.org/radicale/brento/")
+      (setq org-caldav-calendars
+    '((:calendar-id "47cddf9a-4057-ccc7-a45d-e00121d796c7"
+	    	:files ("~/Seafile/org-files/work-appointments.org")
+		:inbox "~/Seafile/org-files/work-org-caldav-inbox.org")
+	  (:calendar-id "1f49ba50-739d-057d-a062-a967174808fd"
+		:files ("~/Seafile/org-files/personal-appointments.org")
+		:inbox "~/Seafile/org-files/personal-org-caldav-inbox.org")
+		))
+(setq org-caldav-delete-calendar-entries 'never)
+;; This is the sync on close function; it also prompts for save after syncing so
+;; no late changes get lost
+  (defun org-caldav-sync-at-close ()
+    (org-caldav-sync)
+    (save-some-buffers))
+
+;; This is the delayed sync function; it waits until emacs has been idle for
+;; "secs" seconds before syncing.  The delay is important because the caldav-sync
+;; can take five or ten seconds, which would be painful if it did that right at save.
+;; This way it just waits until you've been idle for a while to avoid disturbing
+;; the user.
+(defvar org-caldav-sync-timer nil
+  "Timer that `org-caldav-push-timer' used to reschedule itself, or nil.")
+(defun org-caldav-sync-with-delay (secs)
+  (when org-caldav-sync-timer
+    (cancel-timer org-caldav-sync-timer))
+  (setq org-caldav-sync-timer
+	      (run-with-idle-timer
+	       (* 1 secs) nil 'org-caldav-sync)))
+(setq org-icalendar-alarm-time 1)
+;; This makes sure to-do items as a category can show up on the calendar
+(setq org-icalendar-include-todo t)
+;; This ensures all org "deadlines" show up, and show up as due dates
+(setq org-icalendar-use-deadline '(event-if-todo event-if-not-todo todo-due))
+;; This ensures "scheduled" org items show up, and show up as start times
+(setq org-icalendar-use-scheduled '(todo-start event-if-todo event-if-not-todo))
+;; Add the delayed save hook with a five minute idle timer
+(add-hook 'after-save-hook
+	        (lambda ()
+	          (when (eq major-mode 'org-mode)
+		          (org-caldav-sync-with-delay 300))))
+;; Add the close emacs hook
+(add-hook 'kill-emacs-hook 'org-caldav-sync-at-close)

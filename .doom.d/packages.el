@@ -58,3 +58,4 @@
 (package! doct)
 (package! helm-org-rifle)
 (package! cython-mode)
+(package! org-caldav)
