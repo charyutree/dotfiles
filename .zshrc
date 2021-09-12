@@ -106,12 +106,13 @@ source $ZSH/oh-my-zsh.sh
 alias workVPN="zsh ~/bin/workVPN.sh"
 alias update="sudo pacman -Syu"
 alias ff="exec firefox & disown"
-alias workNAS="zsh ~/bin/mountworkNAS.sh"
+alias workNAS="zsh ~/bin/NAS.sh"
 alias p="python"
 alias c="clear"
 alias t="task"
 alias shark="sudo surfshark-vpn"
 alias readyshare="zsh ~/bin/readyshare.sh"
+alias nuc="ssh brento@charyutree.duckdns.org"
 
 # Add setup for windows X server for use on WSL2
 export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"

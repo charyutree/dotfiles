@@ -159,8 +159,9 @@
   (outline-hide-sublevels 3))
 
 ;; Associate .xls, .xlsx, .doc, .docx files with system defaults in org mode
-(add-to-list 'org-file-apps '("\\.xls\\'" . default))
+(add-to-list 'org-file-apps '("\\.xls\\'" . "wslview \"%s\""))
 (add-to-list 'org-file-apps '("\\.xlsx\\'" . default))
+(add-to-list 'org-file-apps '("\\.xlsm\\'" . default))
 (add-to-list 'org-file-apps '("\\.doc\\'" . default))
 (add-to-list 'org-file-apps '("\\.docx\\'" . default))
 (add-to-list 'org-file-apps '("\\.pdf\\'" . "cmd.exe \\c \"%s\""))
@@ -178,7 +179,7 @@
  )
 
 ;; set global line spacing
-  (setq line-spacing 0.2)
+  (setq line-spacing 0.3)
 
 (defun my/org-mode-hook ()
   "Stop the org-level headers from increasing in height relative to the other text."
@@ -188,11 +189,11 @@
                   org-level-4
                   org-level-5))
     (set-face-attribute face nil :weight 'normal :height 1.0))
-  (setq line-spacing 0.2)
+  (setq line-spacing 0.3)
   (unfold-4))
 
 (defun my/agenda-hook ()
-  (setq line-spacing 0.2))
+  (setq line-spacing 0.3))
 
 (add-hook 'org-mode-hook 'my/org-mode-hook)
 (add-hook 'org-agenda-mode-hook 'my/agenda-hook)
@@ -202,7 +203,7 @@
 ;;add org-todo states
 (after! org
   (setq org-todo-keywords
-        '((sequence "TODO(t)" "NEXT(n)" "CHECKING(c)" "DRAFTING(D)" "FEEDBACK(f)" "HOLD(h)" "|"  "DONE(d)" "CANCELLED(C)")
+        '((sequence "TODO(t)" "NEXT(n)" "CHECKING(c)" "DRAFTING(D)" "FEEDBACK(f)" "HOLD(h)" "|"  "DONE(d)" "CANCELLED(C)" "STUCK(S)")
           (sequence "PROJECT(p)" "|" "ISSUED(i)")
           (sequence "MEETING(m)" "SITE(s)" "|" "DONE(d)" ))))
 
@@ -219,6 +220,7 @@
         ("NEXT" . "DeepSkyBlue")
         ("MEETING" . "salmon")
         ("SITE" . "salmon")
+        ("STUCK" . "salmon")
         ))
 
 ;; Add capture template
@@ -427,3 +429,140 @@
 		          (org-caldav-sync-with-delay 300))))
 ;; Add the close emacs hook
 (add-hook 'kill-emacs-hook 'org-caldav-sync-at-close)
+;; mu4e setup
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+(setq mu4e-maildir (expand-file-name "~/Maildir"))
+; get mail
+(setq mu4e-get-mail-command "mbsync -c ~/.emacs.d/mu4e/.mbsyncrc -a"
+  ;; mu4e-html2text-command "w3m -T text/html" ;;using the default mu4e-shr2text
+  mu4e-view-prefer-html t
+  mu4e-update-interval 60
+  mu4e-headers-auto-update t
+  mu4e-compose-signature-auto-include nil
+  mu4e-compose-format-flowed t)
+;; to view selected message in the browser, no signin, just html mail
+(with-eval-after-load 'mu4e
+(add-to-list 'mu4e-view-actions
+'("ViewInBrowser" . mu4e-action-view-in-browser) t))
+
+;; enable inline images
+(setq mu4e-view-show-images t)
+;; use imagemagick, if available
+(when (fboundp 'imagemagick-register-types)
+  (imagemagick-register-types))
+
+;; every new email composition gets its own frame!
+;;(setq mu4e-compose-in-new-frame t)
+
+;; don't save message to Sent Messages, IMAP takes care of this
+(setq mu4e-sent-messages-behavior 'delete)
+
+(add-hook 'mu4e-view-mode-hook #'visual-line-mode)
+
+;; <tab> to navigate to links, <RET> to open them in browser
+(add-hook 'mu4e-view-mode-hook
+  (lambda()
+;; try to emulate some of the eww key-bindings
+(local-set-key (kbd "<RET>") 'mu4e~view-browse-url-from-binding)
+(local-set-key (kbd "<tab>") 'shr-next-link)
+(local-set-key (kbd "<backtab>") 'shr-previous-link)))
+
+;; from https://www.reddit.com/r/emacs/comments/bfsck6/mu4e_for_dummies/elgoumx
+(add-hook 'mu4e-headers-mode-hook
+      (defun my/mu4e-change-headers ()
+	(interactive)
+	(setq mu4e-headers-fields
+	      `((:human-date . 25) ;; alternatively, use :date
+		(:flags . 6)
+		(:from . 22)
+		(:thread-subject . ,(- (window-body-width) 70)) ;; alternatively, use :subject
+		(:size . 7)))))
+
+;; if you use date instead of human-date in the above, use this setting
+;; give me ISO(ish) format date-time stamps in the header list
+;(setq mu4e-headers-date-format "%Y-%m-%d %H:%M")
+
+;; spell check
+(add-hook 'mu4e-compose-mode-hook
+    (defun my-do-compose-stuff ()
+       "My settings for message composition."
+       (visual-line-mode)
+       (org-mu4e-compose-org-mode)
+           (use-hard-newlines -1)
+       (flyspell-mode)))
+;;rename files when moving
+;;NEEDED FOR MBSYNC
+(setq mu4e-change-filenames-when-moving t)
+
+;;set up queue for offline email
+;;use mu mkdir  ~/Maildir/acc/queue to set up first
+(setq smtpmail-queue-mail nil)  ;; start in normal mode
+
+;;from the info manual
+(setq mu4e-attachment-dir  "~/Downloads")
+
+(setq message-kill-buffer-on-exit t)
+(setq mu4e-compose-dont-reply-to-self t)
+;; convert org mode to HTML automatically
+(setq org-mu4e-convert-to-html t)
+
+;;from vxlabs config
+;; show full addresses in view message (instead of just names)
+;; toggle per name with M-RET
+(setq mu4e-view-show-addresses 't)
+
+;; don't ask when quitting
+(setq mu4e-confirm-quit nil)
+
+;; mu4e-context
+(setq mu4e-context-policy 'pick-first)
+(setq mu4e-compose-context-policy 'always-ask)
+(with-eval-after-load 'mu4e-context
+(setq mu4e-contexts
+  (list
+   (make-mu4e-context
+    :name "Personal" ;;for brentoar-gmail
+    :enter-func (lambda () (mu4e-message "Entering context work"))
+    :leave-func (lambda () (mu4e-message "Leaving context work"))
+    :match-func (lambda (msg)
+		  (when msg
+		(mu4e-message-contact-field-matches
+		 msg '(:from :to :cc :bcc) "brentoar@gmail.com")))
+    :vars '((user-mail-address . "brentoar@gmail.com")
+	    (user-full-name . "Brent Oar")
+	    (mu4e-sent-folder . "/brentoar-gmail/[brentoar].Sent Mail")
+	    (mu4e-drafts-folder . "/brentoar-gmail/[brentoar].drafts")
+	    (mu4e-trash-folder . "/brentoar-gmail/[brentoar].Trash")
+	    (mu4e-compose-signature . (concat "Formal Signature\n" "Emacs 25, org-mode 9, mu4e 1.0\n"))
+	    (mu4e-compose-format-flowed . t)
+	    (smtpmail-queue-dir . "~/Maildir/brentoar-gmail/queue/cur")
+	    (message-send-mail-function . smtpmail-send-it)
+	    (smtpmail-smtp-user . "brentoar")
+	    (smtpmail-starttls-credentials . (("smtp.gmail.com" 587 nil nil)))
+	    (smtpmail-auth-credentials . (expand-file-name "~/.authinfo.gpg"))
+	    (smtpmail-default-smtp-server . "smtp.gmail.com")
+	    (smtpmail-smtp-server . "smtp.gmail.com")
+	    (smtpmail-smtp-service . 587)
+	    (smtpmail-debug-info . t)
+	    (smtpmail-debug-verbose . t)
+	    (mu4e-maildir-shortcuts . ( ("/brentoar-gmail/INBOX"            . ?i)
+					("/brentoar-gmail/[brentoar].Sent Mail" . ?s)
+					("/brentoar-gmail/[brentoar].Trash"       . ?t)
+					("/brentoar-gmail/[brentoar].All Mail"  . ?a)
+					("/brentoar-gmail/[brentoar].Starred"   . ?r)
+					("/brentoar-gmail/[brentoar].drafts"    . ?d)
+					))))))
+)
+(setq mu4e-html2text-command "w3m -T text/html")
+(with-eval-after-load 'mu4e
+  (setq
+    mu4e-index-cleanup t      ;; do a full cleanup check
+    mu4e-index-lazy-check nil))    ;; consider up-to-date dirs
+(pinentry-start)
+(setq epg-pinentry-mode 'loopback)
+
+;; disable whitespace mode
+(setq global-whitespace-mode 0)
+
+;; run sunrise-sunrise command on load
+(sunrise-sunset)

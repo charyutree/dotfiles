@@ -59,3 +59,6 @@
 (package! helm-org-rifle)
 (package! cython-mode)
 (package! org-caldav)
+(package! org-mime)
+(package! mu4e)
+(package! pinentry)

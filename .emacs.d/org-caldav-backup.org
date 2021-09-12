@@ -6,3 +6,167 @@
 :END:
 <2021-03-02 Tue 10:00>
 
+* SITE 20-510 // 50 Harper - Bridging slab inspection
+:PROPERTIES:
+:Created: [2021-03-08 Mon 17:27]
+:CATEGORY: 20-510
+:ID:       1eec5d05-f643-4b66-9307-74d452d9204a
+:END:
+<2021-03-10 Wed 08:00>
+
+* SITE 20-636 // Coombabah Shoring Boxes
+:PROPERTIES:
+:Created: [2021-03-15 Mon 09:24]
+:CATEGORY: 20-636
+:ID:       751348ac-df1e-49a0-878b-dee58af30ae2
+:END:
+<2021-03-15 Mon 13:00>
+
+* SITE xx-xxx // Ashmore Tafe - Formwork Inspection
+:PROPERTIES:
+:Created: [2021-06-25 Fri 13:58]
+:CATEGORY: xx-xxx
+:ID:       d59f68d4-ca0e-4f94-94e0-3381877878d9
+:END:
+<2021-06-29 Tue 10:00>
+
+* SITE 21-403 // Amersham St West End (B1 to L1 Ramp)
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:28]
+:CATEGORY: 21-403
+:ID:       7a935291-f606-4c86-9887-04f0bf10fe3e
+:END:
+<2021-07-06 Tue 17:29>
+- Pouring 8th July
+
+* SITE 21-551 // Ivedon St, Banyo
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:30]
+:CATEGORY: 21-551
+:ID:       14885a27-af3d-4236-b810-2f104c30ed36
+:END:
+<2021-07-06 Tue 17:30>
+- Pouring 12th July
+
+* SITE 21-403 // Amersham St West End (B1 to L1 Ramp)
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:28]
+:CATEGORY: 21-403
+:ID:       7a935291-f606-4c86-9887-04f0bf10fe3e
+:END:
+<2021-07-06 Tue 17:29>
+- Pouring 8th July
+
+* SITE 21-551 // Ivedon St, Banyo
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:30]
+:CATEGORY: 21-551
+:ID:       14885a27-af3d-4236-b810-2f104c30ed36
+:END:
+<2021-07-06 Tue 17:30>
+- Pouring 12th July
+
+* SITE xx-xxx // Redland District Special School
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:31]
+:CATEGORY: xx-xxx
+:ID:       cc317ff3-6cce-4c5a-9bc7-771773a365ab
+:END:
+<2021-07-06 Tue 09:00>
+ - Pour 2 (between grids 4 and 6)
+
+* SITE xx-xxx // Karbunya St - Check on screw piles and site meetign
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:44]
+:CATEGORY: xx-xxx
+:ID:       a0533d53-6200-45e2-a461-6bb837242c59
+:END:
+<2021-07-07 Wed 08:30>
+
+* SITE 21-385 // 16 Breana Mudgeeraba Pool Inspection
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:45]
+:CATEGORY: xx-xxx
+:ID:       0dc83d5e-bef4-4abd-a6ff-607006589ced
+:END:
+<2021-07-06 Tue 08:00>
+
+* SITE xx-xxx // Altitude Aspire - Boardwalk Footings
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:47]
+:CATEGORY: xx-xxx
+:ID:       e8eb61ec-3204-4322-87ff-6ac1525bde60
+:END:
+<2021-07-06 Tue 15:00>
+
+* 21-525 // 5-7 Belboro Road Shailer Park - Formwork Inspection
+  :PROPERTIES:
+  :ID:       0c04f4fb-b65d-4a20-98bd-a05e5e60da5e
+  :END:
+  <2021-06-29 Tue 12:00-14:00>
+
+* SITE 21-403 // Amersham St West End (B1 to L1 Ramp)
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:28]
+:CATEGORY: 21-403
+:ID:       7a935291-f606-4c86-9887-04f0bf10fe3e
+:END:
+<2021-07-06 Tue 17:29>
+- Pouring 8th July
+
+* SITE 21-551 // Ivedon St, Banyo
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:30]
+:CATEGORY: 21-551
+:ID:       14885a27-af3d-4236-b810-2f104c30ed36
+:END:
+<2021-07-06 Tue 17:30>
+- Pouring 12th July
+
+* 21-525 // 5-7 Belboro Road Shailer Park - Formwork Inspection
+  :PROPERTIES:
+  :ID:       0c04f4fb-b65d-4a20-98bd-a05e5e60da5e
+  :END:
+  <2021-06-29 Tue 12:00-14:00>
+
+* SITE 21-551 // Ivedon St, Banyo
+:PROPERTIES:
+:Created: [2021-07-05 Mon 17:30]
+:CATEGORY: 21-551
+:ID:       14885a27-af3d-4236-b810-2f104c30ed36
+:END:
+<2021-07-08 Thu 10:30>
+- Pouring 12th July
+
+* SITE 20-494 // 7 Andrea - Frame
+:PROPERTIES:
+:Created: [2021-07-08 Thu 08:44]
+:CATEGORY: 20-494
+:ID:       3788cbbb-1347-483d-8403-7d430144db0c
+:END:
+<2021-07-08 Thu 11:00>
+
+* SITE 20-744 // Woodland Ave - Frame
+:PROPERTIES:
+:Created: [2021-07-08 Thu 08:49]
+:CATEGORY: 20-744
+:ID:       d45ca5fe-dfe9-4e3d-884f-b4763b186e0c
+:END:
+<2021-07-08 Thu 09:00>
+
+* SITE 21-257 // Foxwell State School - Level 2 Pour 3
+:PROPERTIES:
+:Created: [2021-07-08 Thu 08:52]
+:CATEGORY: 21-257
+:ID:       72c110ad-0a7e-4b57-86a2-84e81f642610
+:END:
+<2021-07-09 Fri 10:00>
+
+* SITE 21-184 // 39 Cadence - Blockwork Inspection
+:PROPERTIES:
+:Created: [2021-07-22 Thu 09:03]
+:CATEGORY: 21-184
+:ID:       bc4d1182-b620-4085-991f-5cfc007aabec
+:END:
+<2021-07-22 Fri 09:00>
+

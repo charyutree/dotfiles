@@ -1,0 +1,90 @@
+# mbsyncrc based on
+# http://www.ict4g.net/adolfo/notes/2014/12/27/EmacsIMAP.html
+# ACCOUNT INFORMATION
+IMAPAccount brentoar-gmail
+# Address to connect to
+Host imap.gmail.com
+User brentoar@gmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.emacs.d/mu4e/.mbsyncpass-brentoar.gpg"
+AuthMechs LOGIN
+Port 993
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# THEN WE SPECIFY THE LOCAL AND REMOTE STORAGE
+# - THE REMOTE STORAGE IS WHERE WE GET THE MAIL FROM (E.G., THE
+#   SPECIFICATION OF AN IMAP ACCOUNT)
+# - THE LOCAL STORAGE IS WHERE WE STORE THE EMAIL ON OUR COMPUTER
+
+# REMOTE STORAGE (USE THE IMAP ACCOUNT SPECIFIED ABOVE)
+IMAPStore brentoar-gmail-remote
+Account brentoar-gmail
+
+# LOCAL STORAGE (CREATE DIRECTORIES with mkdir -p ~/Maildir/brentoar-gmail)
+MaildirStore brentoar-gmail-local
+Path ~/Maildir/brentoar-gmail/
+Inbox ~/Maildir/brentoar-gmail/INBOX
+# REQUIRED ONLY IF YOU WANT TO DOWNLOAD ALL SUBFOLDERS; SYNCING SLOWS DOWN
+# SubFolders Verbatim
+
+# CONNECTIONS SPECIFY LINKS BETWEEN REMOTE AND LOCAL FOLDERS
+#
+# CONNECTIONS ARE SPECIFIED USING PATTERNS, WHICH MATCH REMOTE MAIl
+# FOLDERS. SOME COMMONLY USED PATTERS INCLUDE:
+#
+# 1 "*" TO MATCH EVERYTHING
+# 2 "!DIR" TO EXCLUDE "DIR"
+# 3 "DIR" TO MATCH DIR
+
+Channel brentoar-gmail-inbox
+Master :brentoar-gmail-remote:
+Slave :brentoar-gmail-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel brentoar-gmail-trash
+Master :brentoar-gmail-remote:"[Gmail]/Trash"
+Slave :brentoar-gmail-local:"[brentoar].Trash"
+Create Both
+Expunge Both
+SyncState *
+
+Channel brentoar-gmail-sent
+Master :brentoar-gmail-remote:"[Gmail]/Sent Mail"
+Slave :brentoar-gmail-local:"[brentoar].Sent Mail"
+Create Both
+Expunge Both
+SyncState *
+
+Channel brentoar-gmail-all
+Master :brentoar-gmail-remote:"[Gmail]/All Mail"
+Slave :brentoar-gmail-local:"[brentoar].All Mail"
+Create Both
+Expunge Both
+SyncState *
+
+Channel brentoar-gmail-starred
+Master :brentoar-gmail-remote:"[Gmail]/Starred"
+Slave :brentoar-gmail-local:"[brentoar].Starred"
+Create Both
+Expunge Both
+SyncState *
+
+# GROUPS PUT TOGETHER CHANNELS, SO THAT WE CAN INVOKE
+# MBSYNC ON A GROUP TO SYNC ALL CHANNELS
+#
+# FOR INSTANCE: "mbsync gmail" GETS MAIL FROM
+# "gmail-inbox", "gmail-sent", and "gmail-trash"
+#
+Group brentoar-gmail
+Channel brentoar-gmail-inbox
+Channel brentoar-gmail-sent
+Channel brentoar-gmail-trash
+Channel brentoar-gmail-all
+Channel brentoar-gmail-starred
+
+
+
